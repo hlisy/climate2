@@ -1,0 +1,105 @@
+<!DOCTYPE html><html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Re:Earth 재단</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif;}
+    body {color: #2e2e2e; background-color: #f8fdf8; overflow-x: hidden;}
+    header {position: fixed; top: 0; left: 0; width: 100%; background: rgba(255,255,255,0.9); display: flex; align-items: center; justify-content: space-between; padding: 15px 50px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); z-index: 1000;}
+    header .logo {display: flex; align-items: center; font-weight: 600; font-size: 1.4em; color: #2b7a2b;}
+    header .logo svg {width: 36px; height: 36px; margin-right: 10px; filter: drop-shadow(0 2px 2px rgba(0,0,0,0.2));}
+    nav a {margin: 0 15px; color: #2e2e2e; text-decoration: none; font-weight: 500;}
+    nav a:hover {color: #2b7a2b;}section {min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 80px 20px; text-align: center;}
+.hero {background: linear-gradient(135deg, #c8facc, #eafbea);}
+.hero h1 {font-size: 3em; color: #2b7a2b; margin-bottom: 20px;}
+.hero p {font-size: 1.2em; max-width: 600px;}
+
+.activity, .campaign, .news, .support {background: #fff;}
+h2 {color: #2b7a2b; margin-bottom: 20px;}
+p {max-width: 700px; margin-bottom: 20px; line-height: 1.6;}
+
+.campaign form {display: flex; flex-direction: column; width: 300px;}
+.campaign input, .campaign textarea, .campaign button {margin-bottom: 10px; padding: 10px; border-radius: 8px; border: 1px solid #ccc;}
+.campaign button {background-color: #2b7a2b; color: white; border: none; cursor: pointer;}
+.campaign button:hover {background-color: #249424;}
+
+footer {background: #2b7a2b; color: white; text-align: center; padding: 20px; font-size: 0.9em;}
+
+/* scroll animation */
+.reveal {opacity: 0; transform: translateY(30px); transition: all 0.8s ease;}
+.reveal.active {opacity: 1; transform: translateY(0);}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <!-- 하트 + 리사이클 화살표 SVG 아이콘 -->
+      <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#2b7a2b" d="M32 10c-5 0-9 3-10 8-2-5-6-8-11-8-7 0-12 6-12 13 0 13 23 27 23 27s23-14 23-27c0-7-5-13-12-13z"/>
+        <path fill="none" stroke="#fff" stroke-width="3" d="M25 40l5 8 9-5" />
+        <path fill="none" stroke="#fff" stroke-width="3" d="M33 15l6-6 6 6" />
+      </svg>
+      Re:Earth
+    </div>
+    <nav>
+      <a href="#intro">소개</a>
+      <a href="#activity">핵심활동</a>
+      <a href="#campaign">캠페인 참여</a>
+      <a href="#news">뉴스</a>
+      <a href="#support">후원/문의</a>
+    </nav>
+  </header>  <section class="hero" id="intro">
+    <h1>작은 실천이 지구를 바꾼다</h1>
+    <p>Re:Earth는 학교와 지역 사회에서 제로웨이스트 문화를 확산시키기 위해 활동하는 비영리재단입니다. 우리의 작은 노력이 더 푸른 지구를 만듭니다.</p>
+  </section>  <section class="activity reveal" id="activity">
+    <h2>핵심 활동</h2>
+    <p>학교 및 지역사회와 협력하여 제로웨이스트 캠페인을 운영하고, 재활용 습관 형성을 위한 교육과 워크숍을 진행합니다. 지속 가능한 소비 문화를 확산시키는 것이 우리의 목표입니다.</p>
+  </section>  <section class="campaign reveal" id="campaign">
+    <h2>캠페인 참여</h2>
+    <p>Re:Earth의 활동에 함께해 주세요! 작은 참여가 큰 변화를 만듭니다.</p>
+    <form>
+      <input type="text" placeholder="이름" required />
+      <input type="email" placeholder="이메일" required />
+      <textarea placeholder="참여 동기" rows="4"></textarea>
+      <button type="submit">참여 신청</button>
+    </form>
+  </section>  <section class="news reveal" id="news">
+    <h2>뉴스 / 스토리</h2>
+    <p>📢 최근 Re:Earth의 제로웨이스트 캠페인이 전국 20개 학교에서 시작되었습니다! <br>🌱 참여 학생들은 일회용품 줄이기, 다회용컵 사용, 분리배출 개선 활동을 이어가고 있습니다.</p>
+  </section>  <section class="support reveal" id="support">
+    <h2>후원 / 문의</h2>
+    <p>Re:Earth의 활동을 응원하고 후원하고 싶으신가요?<br>문의: support@reearth.org</p>
+  </section>  <footer>
+    <p>© 2025 Re:Earth Foundation. 이 홈페이지의 지적 소유권은 재단에게 있습니다.</p>
+  </footer>  <script>
+    // Scroll reveal
+    const reveals = document.querySelectorAll('.reveal');
+    window.addEventListener('scroll', () => {
+      reveals.forEach(el => {
+        const windowHeight = window.innerHeight;
+        const elementTop = el.getBoundingClientRect().top;
+        const elementVisible = 150;
+        if (elementTop < windowHeight - elementVisible) {
+          el.classList.add('active');
+        }
+      });
+    });
+
+    // 페이지 구성 요소 체크
+    window.onload = () => {
+      const sections = ['intro','activity','campaign','news','support'];
+      sections.forEach(id => {
+        if (document.getElementById(id)) {
+          console.info(`✅ 섹션 '${id}' 로드 완료.`);
+        } else {
+          console.warn(`⚠️ 섹션 '${id}' 누락됨.`);
+        }
+      });
+    };
+  </script></body>
+</html>
